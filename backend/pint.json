@@ -1,0 +1,11 @@
+{
+  "preset": "laravel",
+  "rules": {
+    "simplified_null_return": true,
+    "braces_position": {
+      "control_structures_opening_brace": "same_line"
+    },
+    "no_unused_imports": true,
+    "array_syntax": { "syntax": "short" }
+  }
+}
