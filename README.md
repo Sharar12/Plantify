@@ -306,3 +306,14 @@ Released under the **MIT License**. See [`LICENSE`](./LICENSE) for the full text
 ---
 
 <sub>Made with 💚 &nbsp;·&nbsp; Star ⭐ this repo if Plantify helped you sprout something green.</sub>
+
+
+## 📚 Botanical Documentation & Runbooks
+- [Platform Architecture & Domain Model](docs/ARCHITECTURE.md)
+- [Plant Care & Taxonomy Guidelines](docs/PLANT_CARE_GUIDELINES.md)
+- [Specialist Botanist Q&A Triage Runbook](docs/SPECIALIST_TRIAGE_GUIDE.md)
+- [SSLCommerz Payment Gateway Specification](docs/PAYMENT_GATEWAY_INTEGRATION.md)
+- [Dispatch & Transit Quality Protocols](docs/DELIVERY_PROTOCOL.md)
+- [Role-Based Access Control (RBAC) Matrix](docs/RBAC_MATRIX.md)
+- [Monsoon Botanical Care Handbook](docs/MONSOON_CARE_HANDBOOK.md)
+- [Production Deployment Runbook](docs/DEPLOYMENT_RUNBOOK.md)
