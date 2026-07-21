@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+/* ========== PREMIUM ANIMATIONS ========== */
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+    opacity: 0.6;
+  }
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(0);
+    opacity: 0;
+  }
+}
+
+@keyframes drift-gentle {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-20px);
+  }
+  75% {
+    transform: translateX(20px);
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(30px, -30px);
+  }
+  66% {
+    transform: translate(-20px, 20px);
+  }
+}
+
+/* ========== ANIMATION CLASSES ========== */
+
+.animate-breathe {
+  animation: breathe 20s ease-in-out infinite;
+}
+
+.animate-float-up {
+  animation: float-up 20s ease-in-out infinite;
+}
+
+.animate-drift-gentle {
+  animation: drift-gentle 15s ease-in-out infinite;
+}
+
+.animate-float-gentle {
+  animation: float-gentle 25s ease-in-out infinite;
+}
+
+/* ========== CUSTOM SCROLLBAR ========== */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(243, 244, 246, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.3);
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.5);
+}
+
+/* ========== SELECTION COLORS ========== */
+
+::selection {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: inherit;
+}
+
+::-moz-selection {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: inherit;
+}
+
+/* ========== SMOOTH SCROLL ========== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ========== PREMIUM FOCUS STYLES ========== */
+
+*:focus-visible {
+  outline: 2px solid rgba(16, 185, 129, 0.5);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ========== ACCESSIBILITY - REDUCED MOTION ========== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ========== PREMIUM TYPOGRAPHY ========== */
+
+body {
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========== PERFORMANCE OPTIMIZATIONS ========== */
+
+.animate-float-up,
+.animate-drift-gentle,
+.animate-float-gentle,
+.animate-breathe {
+  will-change: transform, opacity;
+}
+
+/* ========== BASE STYLES ========== */
+body {
+  color: #111827;
+}

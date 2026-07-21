@@ -1,0 +1,85 @@
+# ============================================================
+#  Plantify — Root .gitignore for the monorepo
+#  Backend (Laravel) and Frontend (Next.js) each have their
+#  own .gitignore for app-specific ignores. This file catches
+#  project-root artifacts that escape those subproject ignores.
+# ============================================================
+
+# ---------- OS noise ----------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ---------- Editors / IDEs ----------
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+.idea/
+*.iml
+.fleet/
+.nova/
+.zed/
+*.swp
+*.swo
+
+# ---------- Logs ----------
+*.log
+*.log.*
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---------- Secrets (NEVER commit) ----------
+# Belt and suspenders — backend/.gitignore and frontend/.gitignore
+# also exclude .env; this catches any leak at the repo root.
+.env
+.env.*
+!.env.example
+
+# ---------- Misc / scratch ----------
+nul
+thumbs.db    # intentionally lowercase too on case-insensitive filesystems
+build/
+dist/
+coverage/
+
+# ---------- Backend (delegated; declared again for safety) ----------
+backend/vendor/
+backend/node_modules/
+backend/public/build/
+backend/public/hot/
+backend/public/storage/
+backend/storage/*.key
+backend/bootstrap/cache/*.php
+!backend/bootstrap/cache/.gitignore
+
+# ---------- Frontend (delegated; declared again for safety) ----------
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.vercel/
+frontend/.turbo/
+frontend/coverage/
+frontend/*.tsbuildinfo
+
+# ---------- Local databases (dev only) ----------
+# The demo database dump IS tracked: database/nextjs_plantify.sql
+# Ignore any local SQLite / DB files created during development:
+*.sqlite
+*.sqlite-journal
+*.db
+backend/database/*.sqlite
+frontend/*.sqlite
+
+# Don't accidentally commit large or private SQL exports later:
+database/local-*.sql
+database/*.dump
